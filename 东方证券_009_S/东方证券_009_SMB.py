@@ -43,7 +43,7 @@ for date in dates_test:
     #计算权重
     WeightSmall = MVFloatSmall / MVFloatSmall.sum()
     WeightBig = MVFloatBig / MVFloatBig.sum()
-    
+
     for order in range(0,orders):
         SpanReturnSmall = dataSpanReturn['SpanReturn'][(dataSpanReturn['dates'] == date) & (dataSpanReturn['order'] == order)]
         SpanReturnBig = dataSpanReturn['SpanReturn'][(dataSpanReturn['dates'] == date) & (dataSpanReturn['order'] == order)]
@@ -52,12 +52,3 @@ for date in dates_test:
 
 print(factorSMB)
 factorSMB.to_csv('factor/middle/东方证券_009_SMB.csv')
-
-
-
-
-    
-
-
-
-
